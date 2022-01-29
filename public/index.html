@@ -1,89 +1,124 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/9.6.5/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/9.6.5/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/9.6.5/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/9.6.5/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/9.6.5/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/9.6.5/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/9.6.5/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/9.6.5/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/9.6.5/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/9.6.5/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+<head>
+  <title>Daniel Quach's Portfolio</title>
+  <meta name="author" content="Daniel Quach">
+  <meta name="description" content="This is a portfolio site for cse134B lab 2">
+  <style></style>
+  <script src=""></script>
+  <link rel="icon" type="image/png" href="./images/favicon-32x32.png">
+</head>
+<body>
+  <header>
+    <h1>Daniel's Portfolio</h1>
+    <h2>This is my portfolio</h2>
+  </header>
+  <hr>
+  <nav>
+    <details>
+      <summary>Navigation</summary>
+      <ul>
+        <li><a href="experimental.html">Experimental</a></li>
+        <li><a href="interests.html">Interests</a></li>
+      </ul>
+    </details>
+    
+  </nav>
+  <br>
+  <main>
+    <section>
+      <h3>Introduction</h3>
+      <div class="useless">
+        <figure>
+          <picture>
+            <img
+            src="./images/me.JPG"
+            alt=" This is a picture of me" width="150" height="200">
+          </picture>
+          <figcaption>Me</figcaption>
+        </figure>
+          <p>Hello. I am <span>Daniel Quach</span>, a third year Computer Science student at UCSD. 
+            I have <b>no clue</b> how to make sites look good even with CSS allowed so 
+            I apologize for your eyes in advance.</p>
+          
+      </div>
+    </section>
+    <aside>
+      <table>
+        <caption>Skills</caption>
+        <colgroup>
+          <col span="1">
+          <col span="1">
+          <!--Not really sure what to do with this without CSS-->
+        </colgroup>
+        <tr>
+          <th>Skill</th>
+          <th>Proficiency</th>
+        </tr>
+        <tr>
+          <td>HTML</td>
+          <td>Intermediate</td>
+        </tr>
+        <tr>
+          <td>CSS</td>
+          <td>Beginner</td>
+        </tr>
+        <tr>
+          <td>CSS</td>
+          <td>Beginner</td>
+        </tr>
+        <tr>
+          <td>Procrastination</td>
+          <td>Godly</td>
+        </tr>
+      </table>
+    </aside>
+  </main>
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+  <footer>
+    <h3>Contact me</h3>
+    <p><i>(This doesn't work right now)</i></p>
+    <form>
+      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="Your name">
+      <br><br>
+      <label for="Country">Country</label>
+      <input list="countries" id="Country" name="Country">
+      <datalist id="countries">
+          <option>USA</option>
+          <option>Canada</option>
+          <option>Mexico</option>
+      </datalist>
+      <br><br>
+      <label for="timezone">Timezone</label>
+      <select id="timezone" name="timezone">
+        <optgroup label="Actual Options">
+          <option value="PST">PST</option>
+          <option value="EST">EST</option>
+        </optgroup>
+        <optgroup label="Other">
+          <option value="other">Other :)</option>
+        </optgroup>
+      </select>
+      <br><br>
+      <fieldset>
+        <legend>Is the previous field redundant?</legend>
+        <label for="yes1">Yes</label>
+        <input type="radio" id="yes1">
+        <br>
+        <label for="yes2">Yes</label>
+        <input type="radio" id="yes2">
+      </fieldset>
+      <br><br>
+      <label for="subject">Subject</label>
+      <textarea id="subject" name="subject" placeholder="message"></textarea>
+      <br><br>
+      <input type="submit" value="Submit">
+      <br><br>
+    </form>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+  </footer>
+</body>
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e: any) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
 </html>
